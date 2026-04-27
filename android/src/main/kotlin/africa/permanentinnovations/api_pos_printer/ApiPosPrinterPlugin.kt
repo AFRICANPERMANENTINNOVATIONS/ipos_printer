@@ -1,11 +1,11 @@
-package africa.permanentinnovations.ipos_printer
+package africa.permanentinnovations.api_pos_printer
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import africa.permanentinnovations.ipos_printer.backend.BackendDetector
-import africa.permanentinnovations.ipos_printer.backend.PrinterBackend
-import africa.permanentinnovations.ipos_printer.models.TextStyle
+import africa.permanentinnovations.api_pos_printer.backend.BackendDetector
+import africa.permanentinnovations.api_pos_printer.backend.PrinterBackend
+import africa.permanentinnovations.api_pos_printer.models.TextStyle
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
@@ -19,7 +19,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class IposPrinterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
+class ApiPosPrinterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
 
     private lateinit var methodChannel: MethodChannel
     private lateinit var eventChannel: EventChannel
@@ -31,9 +31,9 @@ class IposPrinterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamH
 
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         context = binding.applicationContext
-        methodChannel = MethodChannel(binding.binaryMessenger, "africa.permanentinnovations.ipos_printer/methods")
+        methodChannel = MethodChannel(binding.binaryMessenger, "africa.permanentinnovations.api_pos_printer/methods")
         methodChannel.setMethodCallHandler(this)
-        eventChannel = EventChannel(binding.binaryMessenger, "africa.permanentinnovations.ipos_printer/status")
+        eventChannel = EventChannel(binding.binaryMessenger, "africa.permanentinnovations.api_pos_printer/status")
         eventChannel.setStreamHandler(this)
     }
 

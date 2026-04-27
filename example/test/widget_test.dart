@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ipos_printer_example/main.dart';
+import 'package:api_pos_printer_example/main.dart';
 
 void main() {
   testWidgets('Demo app renders Connect button', (tester) async {

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ipos_printer_example"
+        android:label="api_pos_printer_example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -17,12 +17,12 @@ export 'src/text_style.dart';
 ///
 /// All operations are asynchronous. The native side serialises calls and
 /// resolves them when the device fires the AIDL `onRunResult` callback.
-class IposPrinter {
-  IposPrinter._();
-  static final IposPrinter instance = IposPrinter._();
+class ApiPosPrinter {
+  ApiPosPrinter._();
+  static final ApiPosPrinter instance = ApiPosPrinter._();
 
-  static const _methods = MethodChannel('africa.permanentinnovations.ipos_printer/methods');
-  static const _statusEvents = EventChannel('africa.permanentinnovations.ipos_printer/status');
+  static const _methods = MethodChannel('africa.permanentinnovations.api_pos_printer/methods');
+  static const _statusEvents = EventChannel('africa.permanentinnovations.api_pos_printer/status');
 
   Stream<PrinterStatus>? _statusStream;
 
@@ -48,7 +48,7 @@ class IposPrinter {
       {'backend': backend == PrinterBackend.auto ? null : backend.id},
     );
     if (res == null || res['connected'] != true) {
-      throw const IposPrinterException('Failed to connect to printer service');
+      throw const ApiPosPrinterException('Failed to connect to printer service');
     }
     final id = res['backend'] as String?;
     return PrinterBackend.values.firstWhere(
@@ -188,9 +188,9 @@ class IposPrinter {
       _methods.invokeMethod<void>('performPrint', {'feedLines': feedLines});
 }
 
-class IposPrinterException implements Exception {
-  const IposPrinterException(this.message);
+class ApiPosPrinterException implements Exception {
+  const ApiPosPrinterException(this.message);
   final String message;
   @override
-  String toString() => 'IposPrinterException: $message';
+  String toString() => 'ApiPosPrinterException: $message';
 }

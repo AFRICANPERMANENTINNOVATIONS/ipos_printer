@@ -1,7 +1,7 @@
-# ipos_printer
+# api_pos_printer
 
-[![pub package](https://img.shields.io/pub/v/ipos_printer.svg)](https://pub.dev/packages/ipos_printer)
-[![pub points](https://img.shields.io/pub/points/ipos_printer)](https://pub.dev/packages/ipos_printer/score)
+[![pub package](https://img.shields.io/pub/v/api_pos_printer.svg)](https://pub.dev/packages/api_pos_printer)
+[![pub points](https://img.shields.io/pub/points/api_pos_printer)](https://pub.dev/packages/api_pos_printer/score)
 
 Flutter plugin that drives the **integrated thermal printer** on Android POS
 terminals. Two backends are supported out of the box and the plugin
@@ -18,11 +18,11 @@ Android only. There is no equivalent service on iOS.
 
 ```yaml
 dependencies:
-  ipos_printer: ^0.1.2
+  api_pos_printer: ^0.1.2
 ```
 
 ```dart
-import 'package:ipos_printer/ipos_printer.dart';
+import 'package:api_pos_printer/api_pos_printer.dart';
 ```
 
 The plugin already declares the required `<queries>` entries in its manifest;
@@ -31,7 +31,7 @@ no extra Android configuration is needed in your host app.
 ## Quick start
 
 ```dart
-final printer = IposPrinter.instance;
+final printer = ApiPosPrinter.instance;
 
 // 1. Discover and connect.
 final available = await printer.listBackends();
@@ -105,7 +105,7 @@ this order: `ipos`, then `sunmi`.
 
 1. Drop the vendor AIDL into `android/src/main/aidl/<vendor>/…`.
 2. Implement the `PrinterBackend` Kotlin interface in
-   `android/src/main/kotlin/africa/permanentinnovations/ipos_printer/backend/`.
+   `android/src/main/kotlin/africa/permanentinnovations/api_pos_printer/backend/`.
 3. Register the implementation in `BackendDetector.autoDetect`.
 
 Dart and Kotlin layers are decoupled: Dart only knows about operations, not

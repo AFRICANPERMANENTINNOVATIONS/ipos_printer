@@ -1,7 +1,7 @@
-package africa.permanentinnovations.ipos_printer.backend
+package africa.permanentinnovations.api_pos_printer.backend
 
 import android.graphics.Bitmap
-import africa.permanentinnovations.ipos_printer.models.TextStyle
+import africa.permanentinnovations.api_pos_printer.models.TextStyle
 
 interface PrinterBackend {
     val name: String

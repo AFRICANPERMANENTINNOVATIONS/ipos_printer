@@ -1,11 +1,11 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ipos_printer/ipos_printer.dart';
+import 'package:api_pos_printer/api_pos_printer.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  const channel = MethodChannel('africa.permanentinnovations.ipos_printer/methods');
+  const channel = MethodChannel('africa.permanentinnovations.api_pos_printer/methods');
   final messenger = TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
 
   setUp(() {
@@ -26,17 +26,17 @@ void main() {
   tearDown(() => messenger.setMockMethodCallHandler(channel, null));
 
   test('listBackends maps strings to enum', () async {
-    final backends = await IposPrinter.instance.listBackends();
+    final backends = await ApiPosPrinter.instance.listBackends();
     expect(backends, [PrinterBackend.ipos]);
   });
 
   test('connect returns active backend', () async {
-    final backend = await IposPrinter.instance.connect();
+    final backend = await ApiPosPrinter.instance.connect();
     expect(backend, PrinterBackend.ipos);
   });
 
   test('getStatus maps to enum', () async {
-    final status = await IposPrinter.instance.getStatus();
+    final status = await ApiPosPrinter.instance.getStatus();
     expect(status, PrinterStatus.normal);
   });
 }

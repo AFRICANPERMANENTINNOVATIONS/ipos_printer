@@ -1,4 +1,4 @@
-package africa.permanentinnovations.ipos_printer.backend
+package africa.permanentinnovations.api_pos_printer.backend
 
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -9,8 +9,8 @@ import android.content.ServiceConnection
 import android.graphics.Bitmap
 import android.os.IBinder
 import android.util.Log
-import africa.permanentinnovations.ipos_printer.models.PrinterStatus
-import africa.permanentinnovations.ipos_printer.models.TextStyle
+import africa.permanentinnovations.api_pos_printer.models.PrinterStatus
+import africa.permanentinnovations.api_pos_printer.models.TextStyle
 import com.iposprinter.iposprinterservice.IPosPrinterCallback
 import com.iposprinter.iposprinterservice.IPosPrinterService
 import java.util.concurrent.atomic.AtomicReference

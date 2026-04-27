@@ -1,4 +1,4 @@
-group = "africa.permanentinnovations.ipos_printer"
+group = "africa.permanentinnovations.api_pos_printer"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -27,7 +27,7 @@ plugins {
 }
 
 android {
-    namespace = "africa.permanentinnovations.ipos_printer"
+    namespace = "africa.permanentinnovations.api_pos_printer"
 
     compileSdk = 36
 

@@ -1,1 +1,1 @@
-rootProject.name = 'ipos_printer'
+rootProject.name = 'api_pos_printer'

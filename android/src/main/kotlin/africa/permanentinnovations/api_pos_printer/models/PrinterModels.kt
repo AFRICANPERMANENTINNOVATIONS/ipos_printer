@@ -1,4 +1,4 @@
-package africa.permanentinnovations.ipos_printer.models
+package africa.permanentinnovations.api_pos_printer.models
 
 object PrinterStatus {
     const val NORMAL = 0

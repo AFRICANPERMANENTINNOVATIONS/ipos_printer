@@ -1,4 +1,4 @@
-package africa.permanentinnovations.ipos_printer.backend
+package africa.permanentinnovations.api_pos_printer.backend
 
 import android.content.Context
 

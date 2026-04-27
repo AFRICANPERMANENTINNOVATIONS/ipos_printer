@@ -1,7 +1,7 @@
-# ipos_printer example
+# api_pos_printer example
 
 Minimal Flutter app that exercises every operation exposed by the
-[`ipos_printer`](https://pub.dev/packages/ipos_printer) plugin: backend
+[`api_pos_printer`](https://pub.dev/packages/api_pos_printer) plugin: backend
 auto-detection, status polling, status broadcasts, text printing, multi-column
 rows, QR code, paper feed and final perform-print.
 

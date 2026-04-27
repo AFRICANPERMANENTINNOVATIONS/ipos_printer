@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:ipos_printer/ipos_printer.dart';
+import 'package:api_pos_printer/api_pos_printer.dart';
 
 void main() => runApp(const DemoApp());
 
@@ -12,7 +12,7 @@ class DemoApp extends StatefulWidget {
 }
 
 class _DemoAppState extends State<DemoApp> {
-  final _printer = IposPrinter.instance;
+  final _printer = ApiPosPrinter.instance;
 
   PrinterBackend? _activeBackend;
   PrinterStatus _status = PrinterStatus.unknown;
@@ -86,7 +86,7 @@ class _DemoAppState extends State<DemoApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('ipos_printer demo'),
+          title: const Text('api_pos_printer demo'),
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 16),
