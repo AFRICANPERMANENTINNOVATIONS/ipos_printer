@@ -1,0 +1,36 @@
+name: ipos_printer
+description: >-
+  Flutter plugin for the integrated thermal printer on Android POS terminals.
+  Drives iPosPrinter and Sunmi InnerPrinter services via AIDL with auto
+  backend detection.
+version: 0.1.2
+homepage: https://permanentinnovations.africa
+repository: https://github.com/permanentinnovations/ipos_printer
+issue_tracker: https://github.com/permanentinnovations/ipos_printer/issues
+
+topics:
+  - printer
+  - thermal-printer
+  - pos
+  - sunmi
+  - aidl
+
+environment:
+  sdk: ^3.11.4
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: africa.permanentinnovations.ipos_printer
+        pluginClass: IposPrinterPlugin

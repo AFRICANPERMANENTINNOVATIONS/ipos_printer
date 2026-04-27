@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <queries>
+        <package android:name="com.iposprinter.iposprinterservice" />
+        <package android:name="woyou.aidlservice.jiuiv5" />
+        <package android:name="com.sunmi.peripheral.printer" />
+        <intent>
+            <action android:name="com.iposprinter.iposprinterservice.IPosPrintService" />
+        </intent>
+        <intent>
+            <action android:name="woyou.aidlservice.jiuiv5.IWoyouService" />
+        </intent>
+    </queries>
+
+</manifest>
